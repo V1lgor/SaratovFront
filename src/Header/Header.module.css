@@ -1,8 +1,10 @@
-.Menu {
-    list-style: none;
+.Header {
     background-color: #3498db;
-}
+    padding: 0 0 0 20px;
 
-.Menu .MenuItem {
-    display: inline-block;
+    display: grid;
+
+    grid-template-columns: auto 1fr auto;
+
+    justify-items: center;
 }

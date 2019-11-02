@@ -1,0 +1,38 @@
+.MenuItem {
+    display: inline-block;
+    position: relative;
+}
+
+.MenuItem a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: 0.1s;
+}
+
+.MenuItem a:hover {
+    background-color: #305291;
+}
+
+.MenuItem a:active {
+    background-color: #4ca3db;
+}
+
+.MenuItem:hover .SubMenu{
+    display: block;
+    position: absolute;
+    background-color: #3498db;
+
+}
+/*TODO: fix blue part after last menu element*/
+
+.SubMenu {
+    display: none;
+}
+.SubMenu .MenuItem {
+    width: 100%;
+}
+.SubMenu .MenuItem a {
+    display: block;
+}

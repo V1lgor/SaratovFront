@@ -1,17 +1,16 @@
 import React from 'react';
 
 import styles from './Header.module.css';
+import Menu from "./Menu/Menu";
+import Logo from "./Logo/Logo";
+import SearchField from "./SearchField/SearchField";
 
 let Header = () => {
     return (
-        <header>
-            <ul className = {styles.Menu}>
-                <li className={styles.MenuItem}>1</li>
-                <li className={styles.MenuItem}>2</li>
-                <li className={styles.MenuItem}>3</li>
-                <li className={styles.MenuItem}>4</li>
-                <li className={styles.MenuItem}>5</li>
-            </ul>
+        <header className={styles.Header}>
+            <Logo/>
+            <SearchField/>
+            <Menu/>
         </header>
     );
 };

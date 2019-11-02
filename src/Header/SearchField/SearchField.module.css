@@ -1,0 +1,27 @@
+span {
+    align-self: center;
+    position: relative;
+}
+
+.SearchField {
+    display: block;
+    height: 40%;
+    align-self: center;
+    padding: 2px 5px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+span::after {
+    right: 10px;
+    top: 15%;
+    display: block;
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-image: url(../../img/search-ico.png);
+    background-size: 15px 15px;
+
+}

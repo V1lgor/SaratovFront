@@ -1,0 +1,48 @@
+.MainTopNav {
+    text-align: center;
+    background-color: #a7ead5;
+
+    padding: 20px;
+
+
+}
+
+.MainTopNav a {
+    display: inline-block;
+    width: 250px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #5f6368;
+    font-weight: bold;
+    outline: 2px solid #5f6368;
+    padding: 25px 60px;
+    box-sizing: content-box;
+    transition: 0.1s;
+}
+
+.MainTopNav a:hover {
+    background-color: #7AB19C;
+    color: black;
+}
+
+.MainTopNav a.RedLink {
+    background-color: #ff5566;
+    color: #fff;
+    margin-right: 20px;
+    outline-color: #ff5566;
+
+}
+
+.MainTopNav a.RedLink:hover {
+    background-color: unset;
+    outline-color: black;
+    color: black;
+}
+
+.MainTopNav a.RedLink:visited {
+    color: #fff;
+}
+
+.MainTopNav a:visited {
+    color: #5f6368;
+}

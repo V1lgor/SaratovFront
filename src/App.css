@@ -1,4 +1,13 @@
+html, body {
+  background-color: #f1f3f4;
+}
+
 .App {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  color: #878d93;
+  background-color: #f1f3f4;
+  box-shadow: 0 0 5px 0 #ccc;
 }
 
 .App-logo {

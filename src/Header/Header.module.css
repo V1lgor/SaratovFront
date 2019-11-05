@@ -1,5 +1,4 @@
 .Header {
-    background-color: #3498db;
     padding: 0 0 0 20px;
 
     display: grid;
@@ -7,4 +6,6 @@
     grid-template-columns: auto 1fr auto;
 
     justify-items: center;
+
+    border-bottom: 1px solid #ccc;
 }

@@ -7,11 +7,11 @@ class Menu extends React.Component {
     render() {
         return (
           <ul className={styles.Menu}>
-              <MenuItem text = "Карта"/>
-              <MenuItem text = "Новости"/>
-              <MenuItem text = "Сообщить о проблеме"/>
-              <MenuItem text = "Контакты"/>
-              <MenuItem text = "Войти" subItems = {["Гражданин", "Исполнитель", "Руководитель"]}/>
+              <MenuItem href = "/map" text = "Карта"/>
+              <MenuItem href = "/news" text = "Новости"/>
+              <MenuItem href = "/report" text = "Сообщить о проблеме"/>
+              <MenuItem href = "/contacts" text = "Контакты"/>
+              <MenuItem href = "/sign-in" text = "Войти" subItems = {["Гражданин", "Исполнитель", "Руководитель"]}/>
           </ul>
         );
     }

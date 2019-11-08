@@ -3,11 +3,17 @@
      margin-right: 70px;
  }
 
-.FooterMenu a:visited {
+.FooterMenu a {
     text-decoration: none;
-    padding: 10px 40px;
+    padding: 15px 40px;
     display: inline-block;
     transition: 0.1s;
     font-weight: bold;
     color: #ffffff;
+}
+.FooterMenu li:hover a {
+    color: #ccc;
+}
+.FooterMenu a:visited{
+    color: #fff;
 }

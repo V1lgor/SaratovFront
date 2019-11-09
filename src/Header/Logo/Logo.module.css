@@ -1,4 +1,7 @@
 .Logo {
     width: 150px;
     align-self: center;
+
+    grid-column-start: 2;
+    grid-column-end: 2;
 }

@@ -1,11 +1,11 @@
-span {
+.SearchField {
+    padding: 0 20px;
     align-self: center;
     position: relative;
 }
 
-.SearchField {
+.SearchField input {
     display: block;
-    height: 40%;
     align-self: center;
     padding: 2px 5px;
     border-radius: 10px;
@@ -13,8 +13,8 @@ span {
     border: 1px solid #ccc;
 }
 
-span::after {
-    right: 10px;
+.SearchField::after {
+    right: 30px;
     top: 15%;
     display: block;
     content: "";

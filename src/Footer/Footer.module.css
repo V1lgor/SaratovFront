@@ -1,15 +1,18 @@
 .Footer {
-    background-color: #44aa9c;
 
-    padding: 0 250px 0 250px;
+    background-color: #44aa9c;
 
     display: grid;
 
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 1fr auto auto auto 1fr;
+
+    grid-row-start: 3;
 
     justify-items: center;
 
     align-items: center;
 
     border-bottom: 1px solid #ccc;
+
+
 }

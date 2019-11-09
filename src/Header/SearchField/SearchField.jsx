@@ -6,9 +6,9 @@ class SearchField extends React.Component {
 
     render() {
         return (
-            <span>
-                <input type="text" placeholder={"Поиск по сайту"} className={styles.SearchField}/>
-            </span>
+            <div className={styles.SearchField}>
+                <input type="text" placeholder={"Поиск по сайту"}/>
+            </div>
         );
     }
 };

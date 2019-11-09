@@ -1,3 +1,5 @@
 .FooterLogo {
     width: 150px;
+    grid-column-start: 2;
+    grid-column-end: 2;
 }

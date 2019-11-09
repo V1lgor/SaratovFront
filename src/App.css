@@ -1,31 +1,19 @@
 html, body {
   background-color: #f1f3f4;
-  width: 1920px;
+
 }
 
 .App {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto; /*fraction*/
+
+  height: 100vh;
+
+  grid-template-columns: 100%;
+
+
   color: #878d93;
   background-color: #f1f3f4;
-  box-shadow: 0 0 5px 0 #ccc;
+
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}

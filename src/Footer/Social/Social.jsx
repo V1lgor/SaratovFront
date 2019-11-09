@@ -22,7 +22,7 @@ class Social extends React.Component {
     };
     render() {
         return (
-            <div>
+            <div className={styles.Social}>
                 {this.getSocialLinks()}
             </div>
         )

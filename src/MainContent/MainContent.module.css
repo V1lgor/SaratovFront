@@ -1,7 +1,9 @@
 .MainContent {
+    min-height: 100%;
     text-align: center;
     display: grid;
     grid-template-rows: auto 1fr;
+
 }
 
 .Map {

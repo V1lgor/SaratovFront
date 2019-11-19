@@ -7,7 +7,7 @@ class MainTopNav extends React.Component {
         return (
             <div className={styles.MainTopNav}>
                 <a href="#" className={styles.RedLink}>Сообщить о проблеме</a>
-                <a href="#">Узнать о событиях</a>
+                <a href="/events">Узнать о событиях</a>
             </div>
         )
     }

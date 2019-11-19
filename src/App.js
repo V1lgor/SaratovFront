@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Header from "./Header/Header";
 import MainContent from "./MainContent/MainContent";
+import EPMainContent from "./EventsPageMainContent/EPMainContent";
 import Footer from "./Footer/Footer";
 import {BrowserRouter} from "react-router-dom";
 

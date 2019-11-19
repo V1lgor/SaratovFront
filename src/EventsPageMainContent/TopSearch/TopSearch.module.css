@@ -1,0 +1,35 @@
+.TopSearch {
+    text-align: center;
+    background-color: #a7ead5;
+    padding: 11px;
+    position: relative;
+}
+
+.TopSearch h1 {
+    margin-right: 350px;
+    display: inline-block;
+    color: #5f6368;
+    text-align: center;
+    padding: 7px 15px;
+}
+
+.TopSearch input { /* Так и не удалось его выровнить */
+    width: 450px;
+    align-self: center;
+    padding: 5px 5px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.SearchField::after {
+    right: 30px;
+    top: 50%;
+    display: block;
+    content: "";
+    color: #ff5566; /* Где он, почему даже с такими размерами и цветом его все равно не видно?*/
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-image: url(../../img/search-ico.png); /* Путь вроде нормальный*/
+    background-size: 15px 15px;
+}

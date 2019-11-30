@@ -1,7 +1,10 @@
 import React from 'react';
 import styles from './MainContent.module.css';
-import MainTopNav from "./MainTopNav/MainTopNav";
-
+import MainTopNav from "./Map/MainTopNav/MainTopNav";
+import {Route, Switch} from 'react-router-dom';
+import Events from "./Events/Events";
+import Map from "./Map/Map";
+import Report from "./Report/Report";
 
 class MainContent extends React.Component {
 
@@ -9,9 +12,19 @@ class MainContent extends React.Component {
     render() {
         return (
             <main className={styles.MainContent}>
-                <MainTopNav/>
-                <img src={require("../img/map.png")} alt="" className={styles.Map}/>
+                <Switch>
+                    <Route path = "/send-report/">
+                        <Report/>
+                    </Route>
 
+                    <Route path="/events">
+                        <Events/>
+                    </Route>
+                    <Route path="/">
+                        <Map/>
+                    </Route>
+
+                </Switch>
             </main>
         );
     }

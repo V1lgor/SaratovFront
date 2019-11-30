@@ -1,0 +1,27 @@
+.Piece {
+    justify-self: center;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    box-shadow: 0px 0px 5px 1px #ccc;
+    border-radius: 10px;
+}
+
+.Title {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5px 10px;
+}
+
+.EventTitle {
+    justify-self: left;
+}
+
+.EventDatetime {
+    justify-self: right;
+}
+
+.Image {
+    width: 500px;
+    height: 250px;
+}
+

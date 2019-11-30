@@ -2,7 +2,9 @@
     text-align: center;
     background-color: #a7ead5;
     padding: 11px;
-    position: relative;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin-bottom: 20px;
 }
 
 .TopSearch h1 {
@@ -27,9 +29,9 @@
     display: block;
     content: "";
     color: #ff5566; /* Где он, почему даже с такими размерами и цветом его все равно не видно?*/
-    position: absolute;
+    /*position: absolute;*/
     width: 150px;
     height: 150px;
-    background-image: url(../../img/search-ico.png); /* Путь вроде нормальный*/
+    background-image: url(../../../img/search-ico.png); /* Путь вроде нормальный*/
     background-size: 15px 15px;
 }

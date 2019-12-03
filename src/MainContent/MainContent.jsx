@@ -5,6 +5,8 @@ import {Route, Switch} from 'react-router-dom';
 import Events from "./Events/Events";
 import Map from "./Map/Map";
 import Report from "./Report/Report";
+import FAQ from "./FAQ/FAQ";
+import Ask_question from "./Ask_question/Ask_question";
 
 class MainContent extends React.Component {
 
@@ -19,6 +21,12 @@ class MainContent extends React.Component {
 
                     <Route path="/events">
                         <Events/>
+                    </Route>
+                    <Route path= "/ask-question">
+                        <Ask_question/>
+                    </Route>
+                    <Route path= "/faq">
+                        <FAQ/>
                     </Route>
                     <Route path="/">
                         <Map/>

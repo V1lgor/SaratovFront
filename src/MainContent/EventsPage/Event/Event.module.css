@@ -1,0 +1,14 @@
+.Event {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    border: 1px dashed #ccc;
+    height: 100px;
+    width: 600px;
+    background-color: #fff;
+}
+
+.Event img {
+    width: 100%;
+    display: block;
+    height: 10px;
+}

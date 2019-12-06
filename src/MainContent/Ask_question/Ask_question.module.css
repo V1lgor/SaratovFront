@@ -1,0 +1,43 @@
+.formBody {
+    margin: 0 20% 0 20%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto auto auto;
+    border: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.inputField {
+    grid-column-start: 2;
+    margin-top: 30px;
+    font-size: large;
+
+}
+
+.inputField label {
+    margin-right: 15px;
+    /*align-items: center;
+    text-align: center; */
+}
+
+.formBody p {
+    grid-column-start: 2;
+    font-size: xx-large;
+    display:inline-block;
+    margin-top: 10px;
+}
+
+.sendQuestion {
+    margin-top: 10px;
+    grid-column-start: 2;
+    justify-self: right;
+    display: inline-block;
+    width: 250px;
+    text-decoration: none;
+    font-weight: bold;
+    outline: 2px solid #5f6368;
+    padding: 10px 20px;
+    box-sizing: content-box;
+    transition: 0.1s;
+    color: #5f6368;
+}

@@ -1,0 +1,49 @@
+.imgfaq {
+    width: 50%;
+}
+
+.faqheader {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    grid-column-start: 2;
+    font-size: xx-large;
+    align-items: center;
+}
+
+.faqParent {
+    display: grid;
+    grid-template-columns: 200px auto 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto;
+    margin: 30px 10% 0% 5%;
+    border: 1px solid #ccc;
+    background-color: #ebedee; /* Не приудмали какой нужен цвет*/
+    /*background-color: #a7ead5;*/
+}
+
+.faqheader img {
+    justify-self: right;
+}
+
+.ask_and_answer {
+    padding-left: 75px;
+    font-size: x-large;
+    grid-column-start: 2;
+    justify-self: left;
+    padding-bottom: 20px;
+}
+
+.any_questions {
+    justify-self: right;
+    display: inline-block;
+    width: 250px;
+    text-decoration: none;
+    grid-column-start: 2;
+    font-weight: bold;
+    outline: 2px solid #5f6368;
+    padding: 15px 30px;
+    box-sizing: content-box;
+    transition: 0.1s;
+    color: #5f6368;
+}
+

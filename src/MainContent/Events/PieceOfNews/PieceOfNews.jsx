@@ -17,10 +17,7 @@ class PieceOfNews extends React.Component {
     }
 
     componentDidMount() {
-
     }
-
-
 
     render() {
         return (

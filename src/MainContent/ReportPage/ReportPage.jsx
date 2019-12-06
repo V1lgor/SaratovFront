@@ -12,6 +12,6 @@ class ReportPage extends React.Component {
             </div>
         )
     }
-};
+};1111
 
 export default ReportPage;

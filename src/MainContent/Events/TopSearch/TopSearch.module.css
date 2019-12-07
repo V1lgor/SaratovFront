@@ -13,14 +13,20 @@
     color: #5f6368;
     text-align: center;
     padding: 7px 15px;
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
 
 .TopSearch input { /* Так и не удалось его выровнить */
     width: 450px;
-    align-self: center;
     padding: 5px 5px;
     outline: none;
     border: 1px solid #ccc;
+}
+
+.SearchField {
+    display: inline-block;
+    align-self: center;
 }
 
 .SearchField::after {
@@ -29,9 +35,9 @@
     display: block;
     content: "";
     color: #ff5566; /* Где он, почему даже с такими размерами и цветом его все равно не видно?*/
-    /*position: absolute;*/
-    width: 150px;
-    height: 150px;
+    position: absolute;
+    width: 15px;
+    height: 15px;
     background-image: url(../../../img/search-ico.png); /* Путь вроде нормальный*/
     background-size: 15px 15px;
 }

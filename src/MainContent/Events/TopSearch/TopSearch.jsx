@@ -7,7 +7,9 @@ class TopSearch extends React.Component {
         return (
             <div className={styles.TopSearch}>
                 <h1>События</h1>
-                <input type="text" placeholder={"Я ищу..."}/>
+                <div className={styles.SearchField}>
+                    <input type="text" placeholder={"Я ищу..."}/>
+                </div>
             </div>
 
         );

@@ -1,6 +1,6 @@
 import React from 'react';
 import MainTopNav from "./MainTopNav/MainTopNav";
-import styles from "../MainContent.module.css";
+import styles from "./Map.module.css";
 import {Route} from "react-router-dom";
 
 class Map extends React.Component {

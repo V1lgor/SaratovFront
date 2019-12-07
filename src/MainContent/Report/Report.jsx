@@ -35,6 +35,9 @@ class Report extends React.Component {
                 <Route path = "/send-report/danger-level">
                     <ReportTheme updateReportDraft = {this.updateReportDraft}/>
                 </Route>
+                <Route path = "/send-report/">
+                    <ReportTheme updateReportDraft = {this.updateReportDraft}/>
+                </Route>
             </Switch>
         );
     }

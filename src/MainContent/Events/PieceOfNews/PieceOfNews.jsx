@@ -28,7 +28,12 @@ class PieceOfNews extends React.Component {
                 </div>
                 <img src={require("../../../img/boat.jpg")} alt="" className={styles.Image}/>
                 <div className={styles.BottomPart}>
-                    <span>#детям</span> {}
+                    <span className={styles.Tags}>#детям</span>
+                    <span className={styles.Tags}>#детям</span>
+                    <span className={styles.Tags}>#детям</span>
+                    <span className={styles.Tags}>#детям</span>
+                    <span className={styles.Tags}>#детям</span>
+
                 </div>
             </div>
         );

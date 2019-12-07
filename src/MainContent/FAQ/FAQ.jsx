@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './FAQ.module.css';
-import {NavLink} from "react-router-dom";
+import {NavLink, Link} from "react-router-dom";
 
 class FAQ extends React.Component {
     render() {
@@ -69,7 +69,7 @@ class FAQ extends React.Component {
                     </details>
                 </div>
 
-                <NavLink to = "ask-question" className={styles.any_questions}>Остались вопросы?</NavLink>
+                <Link to = "ask-question" className={styles.any_questions} >Остались вопросы?</Link>
 
             </div>
         );

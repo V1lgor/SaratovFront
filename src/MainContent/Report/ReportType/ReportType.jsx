@@ -8,35 +8,34 @@ class ReportType extends React.Component {
     constructor(props) {
         super(props);
 
-        let visibleMenu = false;
 
         // Выделяем отдельно объект под список типов проблем
         this.state = {
-            problemTypes: []
+            isSelectVisible: false,
+            problemCategoryList: [{category: ""}]
         };
 
         this.typeInput = React.createRef();
+        this.categoryChangeCheckboxRef = React.createRef();
 
         this.handleSubmitForward  = this.handleSubmitForward.bind(this);
         this.handleSubmitBackward = this.handleSubmitBackward.bind(this);
+        this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
     }
 
     componentDidMount() {
-        /*Запрашиваем /getallcomplaintcategories*/
-        let problemTypes = [ {title: "Дворовая территория"},
-                             {title: "Коммунальные проблемы"},
-                             {title: "Разбитая дорога"} ];
-
-        /*Запрашиваем автоматическое определение /detectcomplaintcategory*/
-        let exactProblemType = [{title: "Дворовая территория"}]
-
-        this.setState({problemTypes})
+        fetch('https://test.project-saratov.ml/api/v1/complaint/getallcomplaintcategories')
+            .then(result => result.json())
+            .then(data => {
+                let problemCategoryList = data;
+                this.setState({problemCategoryList});
+            });
     }
 
-    problemTypesToList() {
+    problemCategoryListToSelect() {
         return (
-            <select>
-                {this.state.problemTypes.map(problemType => <option>{this.props.title}</option>)}
+            <select className={styles.CategoryList}>
+                {this.state.problemCategoryList.map(problemCategoryList => <option>{problemCategoryList.category}</option>)}
             </select>
         );
     }
@@ -55,25 +54,26 @@ class ReportType extends React.Component {
         this.props.updateReportDraft({}, "reportType"); // this.setState(reportDraft)
     }
 
+    handleCheckboxChange() {
+        let isSelectVisible =  this.categoryChangeCheckboxRef.current.checked;
+        this.setState({isSelectVisible});
+    }
+
     render() {
-        /*console.log("ReportTheme state:");
-        console.log(this.state);*/
-        console.log(this.state);
         return (
             <form className={styles.formDesign}>
                 <p>Мы автоматически определили тип вашей проблемы, если вы не согласны, нажмите "изменить"</p>
 
                 <label htmlFor="type">Тип проблемы:</label>
-                <input readOnly ref = {this.typeInput} value={this.state.problemTypes[0].title} type = "text" id = "type"/>
-                /*value = {this.state.problemTypes[0].title} не сработало*/
-                /*Выдает странную ошибку Cannot read property 'title' of undefined*/
+                <input readOnly ref = {this.typeInput} value={this.state.problemCategoryList[0].category} type = "text" id = "type"/>
 
-                <p >Изменить</p>
+                <label htmlFor={"changeCheckbox"}>Изменить</label>
+                <input type="checkbox"  ref = { this.categoryChangeCheckboxRef} className={styles.ChangeCheckbox} onChange={this.handleCheckboxChange}/>
 
-                {this.problemTypesToList()}
+                {this.state.isSelectVisible ? this.problemCategoryListToSelect() : null}
 
-                <NavLink to = "theme"        onClick = {this.handleSubmitBackward()}>Назад</NavLink>
-                <NavLink to = "danger-level" onClick = {this.handleSubmitForward()}> Далее</NavLink>
+                <NavLink to = "../theme"        onClick = {this.handleSubmitBackward}>Назад</NavLink>
+                <NavLink to = "../danger-level" onClick = {this.handleSubmitForward}> Далее</NavLink>
             </form>
         );
     }

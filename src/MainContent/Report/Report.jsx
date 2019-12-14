@@ -2,6 +2,8 @@ import React from 'react';
 import {Switch, Route} from "react-router";
 import ReportTheme from "./ReportTheme/ReportTheme";
 import ReportType from "./ReportType/ReportType";
+import DangerLevel from "./DangerLevel/DangerLevel";
+import ChooseAnonymous from "./ChooseAnonymous/ChooseAnonymous";
 
 class Report extends React.Component {
 
@@ -33,7 +35,10 @@ class Report extends React.Component {
                     <ReportType updateReportDraft = {this.updateReportDraft}/>
                 </Route>
                 <Route path = "/send-report/danger-level">
-                    <ReportTheme updateReportDraft = {this.updateReportDraft}/>
+                    <DangerLevel updateReportDraft = {this.updateReportDraft}/>
+                </Route>
+                <Route path = "/send-report/choose-anon">
+                    <ChooseAnonymous updateReportDraft = {this.updateReportDraft}/>
                 </Route>
                 <Route path = "/send-report/">
                     <ReportTheme updateReportDraft = {this.updateReportDraft}/>

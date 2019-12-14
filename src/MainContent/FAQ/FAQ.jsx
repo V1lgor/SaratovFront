@@ -69,7 +69,7 @@ class FAQ extends React.Component {
                     </details>
                 </div>
 
-                <Link to = "ask-question" className={styles.any_questions} >Остались вопросы?</Link>
+                <Link to = "ask-question" className={styles.any_questions}>Остались вопросы?</Link>
 
             </div>
         );

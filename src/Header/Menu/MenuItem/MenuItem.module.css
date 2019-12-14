@@ -35,6 +35,7 @@
 
 .SubMenu {
     display: none;
+    z-index: 100;
 }
 
 .SubMenu .MenuItem:first-child {

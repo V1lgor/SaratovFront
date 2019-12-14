@@ -1,7 +1,6 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import styles from './ReportType.module.css';
-import PieceOfNews from "../../Events/PieceOfNews/PieceOfNews";
 
 class ReportType extends React.Component {
 
@@ -50,8 +49,10 @@ class ReportType extends React.Component {
     }
 
     handleSubmitBackward(problemType) {
-
-        this.props.updateReportDraft({}, "reportType"); // this.setState(reportDraft)
+        let reportType = {
+            type: this.typeInput.current.value
+        };
+        this.props.updateReportDraft(reportType, "reportType"); // this.setState(reportDraft)
     }
 
     handleCheckboxChange() {
@@ -60,6 +61,7 @@ class ReportType extends React.Component {
     }
 
     render() {
+
         return (
             <form className={styles.formDesign}>
                 <p>Мы автоматически определили тип вашей проблемы, если вы не согласны, нажмите "изменить"</p>
@@ -77,6 +79,6 @@ class ReportType extends React.Component {
             </form>
         );
     }
-};
+}
 
 export default ReportType;

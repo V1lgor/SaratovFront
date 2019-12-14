@@ -24,9 +24,6 @@ class ReportTheme extends React.Component {
     }
 
     render() {
-        console.log("ReportTheme state:");
-        console.log(this.state);
-
         return (
             <form>
                 <label htmlFor="theme">Тема:</label>

@@ -16,13 +16,15 @@ class Events extends React.Component {
             id: 1,
             title: "Выпускной",
             date: "20 июня",
-            time: "17:10"
+            time: "17:10",
+            tags: ["Детям", "Не детям", "Не людям"]
         },
             {
                 id: 2,
                 title: "Отчисление",
                 date: "1 декабря",
-                time: "10:00"
+                time: "10:00",
+                tags: []
             }];
         this.setState({events})
     }
@@ -30,6 +32,7 @@ class Events extends React.Component {
         return this.state.events.map(event => <PieceOfNews title = {event.title}
                                                            date = {event.date}
                                                            time = {event.time}
+                                                           tags = {event.tags}
         />);
     }
     render() {

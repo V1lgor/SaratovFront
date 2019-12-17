@@ -5,14 +5,6 @@ class PieceOfNews extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            tags: [
-                {
-                    text: 'поездки'
-                },
-                {
-                    text: 'детям'
-                }
-            ]
         }
     }
 
@@ -28,7 +20,8 @@ class PieceOfNews extends React.Component {
                 </div>
                 <img src={require("../../../img/boat.jpg")} alt="" className={styles.Image}/>
                 <div className={styles.BottomPart}>
-                    <span>#детям</span> {}
+                    {this.props.tags.map(tag => <span className={styles.Tags}>#{tag}</span>)}
+
                 </div>
             </div>
         );

@@ -1,49 +1,62 @@
-.imgfaq {
-    width: 50%;
-}
-
-.faqheader {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-items: center;
-    grid-column-start: 2;
-    font-size: xx-large;
-    align-items: center;
-}
-
-.faqParent {
-    display: grid;
-    grid-template-columns: 200px auto 1fr;
-    grid-template-rows: auto auto auto auto auto auto auto auto auto;
-    margin: 30px 10% 0% 5%;
-    border: 1px solid #ccc;
-    background-color: #ebedee; /* Не приудмали какой нужен цвет*/
-    /*background-color: #a7ead5;*/
-}
-
-.faqheader img {
-    justify-self: right;
-}
-
 .ask_and_answer {
-    padding-left: 75px;
+    padding-left: 25px;
+    font-size: large;
+    grid-column-start: 2;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-right:  1px solid rgba(0, 0, 0, 0.74);
+    border-left:   1px solid rgba(0, 0, 0, 0.74);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.74);
+}
+
+.FAQ_body {
+    color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: 15% auto 20%;
+}
+
+.FAQ_top {
+    grid-column-start: 1;
+    grid-column-end: 4;
     font-size: x-large;
-    grid-column-start: 2;
-    justify-self: left;
-    padding-bottom: 20px;
+    padding: 10px 0;
+    background-color: rgba(76, 185, 42, 0.71);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.74);
 }
 
-.any_questions {
-    justify-self: right;
-    display: inline-block;
-    width: 250px;
-    text-decoration: none;
+.FAQ_top h2 {
     grid-column-start: 2;
-    font-weight: bold;
-    outline: 2px solid #5f6368;
-    padding: 15px 30px;
-    box-sizing: content-box;
-    transition: 0.1s;
-    color: #5f6368;
+    color: rgba(0, 0, 0, 0.74);
+
 }
 
+.heading {
+    text-align: left;
+    display: block;
+    font-size: larger;
+    padding-bottom: 5px;
+}
+
+/*.answer {
+    text-align: left;
+    display: block;
+    font-size: larger;
+    padding-bottom: 5px;
+}*/
+
+.test {
+    width: 20px;
+    float: left;
+    padding-top: 2px;
+    padding-right: 5px;
+}
+
+.ask_and_answer ol {
+    padding-left: 25px;
+    list-style-type:initial;
+}
+
+.answer_body {
+    text-align: left;
+    display: block;
+}

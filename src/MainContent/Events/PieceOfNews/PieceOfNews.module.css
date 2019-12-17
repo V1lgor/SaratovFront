@@ -25,3 +25,17 @@
     height: 250px;
 }
 
+.BottomPart
+{
+    text-align: left;
+    padding: 5px 10px;
+}
+
+.Tags {
+    display: inline-block;
+    background-color: #ccc;
+    border: 1px solid #aeaeae;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-right: 5px;
+}

@@ -14,13 +14,24 @@ class Ask_question extends React.Component {
     }
 
     handleSubmit(event) {
+        //TODO: сделать ошибку через createElement
+        let mailInput =  this.emailInput.current.value;
+        let erInput = document.getElementById("errInputField");
+        try {
+            if (!mailInput)
+                throw "hi girls and boys";
 
-        let question = {
-            email: this.emailInput.current.value,
-            description: this.descriptionInput.current.value
-        };
+            let question = {
+                email: this.emailInput.current.value,
+                description: this.descriptionInput.current.value
+            };
 
-        alert('Ваш вопрос принят на рассмотрение');
+            alert('Ваш вопрос принят на рассмотрение');
+        }
+        catch(err) {
+            erInput.innerHTML = err;
+            event.preventDefault();
+        }
     }
 
     render() {
@@ -30,12 +41,13 @@ class Ask_question extends React.Component {
 
                 <div className={styles.inputField}>
                     <label htmlFor="Email"> Email:</label>
-                    <input ref = {this.emailInput} type="text" id = "Email" placeholder = "Введите почту"/>
+                    <input ref = {this.emailInput} type="email" id = "Email" placeholder = "Введите почту" pattern=".+@gmail.com" required/>
+                    <p id = "errInputField"></p>
                 </div>
 
                 <div className={styles.inputField}>
                     <label htmlFor="description">Описание:</label>
-                    <textarea ref = {this.descriptionInput} id = "description" placeholder = "Введите вопрос"/>
+                    <textarea ref = {this.descriptionInput} id = "description" placeholder = "Введите вопрос" required/>
                 </div>
 
                 <NavLink to = "map"  onClick = {this.handleSubmit} className={styles.sendQuestion}>Отправить</NavLink>

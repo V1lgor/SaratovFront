@@ -1,9 +1,7 @@
 .AnonForm {
-
-}
-
-.Checkboxes {
-
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-column-start: 2;
 }
 
 .Checkboxes div {
@@ -29,7 +27,7 @@
     grid-row: 2;
 }
 
-input[type = "checkbox"] {
+.Checkboxes input[type = "checkbox"] {
     position: relative;
     appearance: none;
     outline: none;
@@ -38,10 +36,10 @@ input[type = "checkbox"] {
     border: 1px solid #D9DADC;
     border-radius: 50px;
     box-shadow: inset -20px 0 0 0 #ffffff;
-    transition-duration: 200ms;
+    transition-duration: 150ms;
 }
 
-input[type = "checkbox"]:after {
+.Checkboxes input[type = "checkbox"]:after {
     content: "";
     position: absolute;
     top: 1px; left: 1px;
@@ -50,12 +48,12 @@ input[type = "checkbox"]:after {
     border-radius: 50%; box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
 }
 
-input[type = "checkbox"]:checked {
-    border-color: #4ED164;
-    box-shadow: inset 20px 0 0 0 #4ED164;
+.Checkboxes input[type = "checkbox"]:checked {
+    border-color: #44aa9c;
+    box-shadow: inset 20px 0 0 0 #44aa9c;
 }
 
-input[type = "checkbox"]:checked:after {
+.Checkboxes input[type = "checkbox"]:checked:after {
     left: 20px;
     box-shadow: -2px 4px 3px rgba(0,0,0,0.05);
 }

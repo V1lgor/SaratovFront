@@ -32,7 +32,7 @@ class ReportTheme extends React.Component {
                 <label htmlFor="description">Описание:</label>
                 <textarea ref = {this.descriptionInput} id = "description" placeholder = "Описание"/>
 
-                <NavLink to = "./report-type/" onClick = {this.handleSubmit}>Далее</NavLink>
+                <NavLink to = "report-type" onClick = {this.handleSubmit}>Далее</NavLink>
             </form>
         );
     }

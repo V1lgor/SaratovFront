@@ -74,8 +74,8 @@ class ReportType extends React.Component {
 
                 {this.state.isSelectVisible ? this.problemCategoryListToSelect() : null}
 
-                <NavLink to = "../theme"        onClick = {this.handleSubmitBackward}>Назад</NavLink>
-                <NavLink to = "../danger-level" onClick = {this.handleSubmitForward}> Далее</NavLink>
+                <NavLink to = "theme"        onClick = {this.handleSubmitBackward}>Назад</NavLink>
+                <NavLink to = "danger-level" onClick = {this.handleSubmitForward}> Далее</NavLink>
             </form>
         );
     }

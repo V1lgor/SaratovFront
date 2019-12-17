@@ -40,6 +40,9 @@ class Report extends React.Component {
                 <Route path = "/send-report/choose-anon">
                     <ChooseAnonymous updateReportDraft = {this.updateReportDraft}/>
                 </Route>
+                <Route path = "/send-report/contacts">
+                    <ChooseAnonymous updateReportDraft = {this.updateReportDraft}/>
+                </Route>
                 <Route path = "/send-report/">
                     <ReportTheme updateReportDraft = {this.updateReportDraft}/>
                 </Route>

@@ -1,75 +1,59 @@
 import React from 'react';
 import styles from './FAQ.module.css';
-import {NavLink, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 class FAQ extends React.Component {
     render() {
         return (
-            <div className = {styles.faqParent}>
-                <div className={styles.faqheader}>
-                    <img src={require("../../img/imgfaq.png")} alt="" className={styles.imgfaq}/>
-                    <p> Часто задаваемые вопросы </p>
+            <div className = {styles.FAQ_body}>
+                <div className={styles.FAQ_top}>
+                    <h2>Часто задаваемые вопросы</h2>
                 </div>
 
                 <div className={styles.ask_and_answer}>
-                    <details>
-                        <summary>
-                            Вопрос
-                        </summary>
-                    Ответ
-                    </details>
+                    <p className={styles.heading}>Попадает ли мое сообщение под действие ФЗ №59?</p>
+                    <img src={require("../../img/greater.png")} alt="" className={styles.test}/>
+                    <p className={styles.answer_body}>
+                        Нет. Работа портала «Наш город» Федеральным законом №59 «О порядке рассмотрения обращения граждан» не регулируется.
+                        Именно поэтому от пользователя не требуется указывать свои персональные данные, и процедура регистрации на портале проходит по упрощенной схеме.
+                        Поступающие на портал сообщения от пользователей, а также ответы органов исполнительной власти и контролирующих органов
+                        на опубликованные сообщения регулируются следующими документами:
+                        <ol>
+                            <li>Постановлением Правительства Москвы №234-ПП от 15 апреля 2013г. «Об интерактивном взаимодействии органов исполнительной власти
+                                 г. Москвы с населением города Москвы»;</li>
+                            <li>Регламентом обработки информации на портале «Наш город»</li>
+                            <li>Едиными правилами модерации</li>
+                        </ol>
+                    </p>
                 </div>
 
                 <div className={styles.ask_and_answer}>
-                    <details>
-                        <summary>
-                            Вопрос
-                        </summary>
-                        Ответ
-                    </details>
+                    <p className={styles.heading}>	Как отправить сообщение на портал?</p>
+                    <img src={require("../../img/greater.png")} alt="" className={styles.test}/>
+                    <p className={styles.answer_body}>
+                        Нет. Работа портала «Наш город» Федеральным законом №59 «О порядке рассмотрения обращения граждан» не регулируется.
+                        Именно поэтому от пользователя не требуется указывать свои персональные данные, и процедура регистрации на портале проходит по упрощенной схеме.
+                        Поступающие на портал сообщения от пользователей, а также ответы органов исполнительной власти и контролирующих органов
+                        на опубликованные сообщения регулируются следующими документами:
+                        1) Постановлением Правительства Москвы №234-ПП от 15 апреля 2013г. «Об интерактивном взаимодействии органов исполнительной власти г. Москвы с населением города Москвы»;
+                        2) Регламентом обработки информации на портале «Наш город»
+                        3) Едиными правилами модерации.</p>
                 </div>
                 <div className={styles.ask_and_answer}>
-                    <details>
-                        <summary>
-                            Вопрос
-                        </summary>
-                        Ответ
-                    </details>
-                </div>
-                <div className={styles.ask_and_answer}>
-                    <details>
-                        <summary>
-                            Вопрос
-                        </summary>
-                        Ответ
-                    </details>
-                </div>
-                <div className={styles.ask_and_answer}>
-                    <details>
-                        <summary>
-                            Вопрос
-                        </summary>
-                        Ответ
-                    </details>
-                </div>
-                <div className={styles.ask_and_answer}>
-                    <details>
-                        <summary>
-                            Вопрос
-                        </summary>
-                        Ответ
-                    </details>
-                </div>
-                <div className={styles.ask_and_answer}>
-                    <details>
-                        <summary>
-                            Вопрос
-                        </summary>
-                        Ответ
-                    </details>
-                </div>
 
-                <Link to = "ask-question" className={styles.any_questions}>Остались вопросы?</Link>
+                </div>
+                <div className={styles.ask_and_answer}>
+
+                </div>
+                <div className={styles.ask_and_answer}>
+
+                </div>
+                <div className={styles.ask_and_answer}>
+
+                </div>
+                <div className={styles.ask_and_answer}>
+
+            </div>
 
             </div>
         );

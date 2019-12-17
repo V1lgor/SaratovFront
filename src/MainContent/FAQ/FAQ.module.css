@@ -4,9 +4,9 @@
     grid-column-start: 2;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
+    border-right:  1px solid rgba(0, 0, 0, 0.74);
+    border-left:   1px solid rgba(0, 0, 0, 0.74);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.74);
 }
 
 .FAQ_body {
@@ -21,8 +21,7 @@
     font-size: x-large;
     padding: 10px 0;
     background-color: rgba(76, 185, 42, 0.71);
-    border-bottom: 1px solid black;
-    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.74);
 }
 
 .FAQ_top h2 {

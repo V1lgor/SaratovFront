@@ -1,0 +1,19 @@
+.About h2{
+
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 6%;
+}
+
+.About img {
+    margin-top: 30px;
+    width: 450px;
+    margin-right: 100px;
+}
+
+.About li {
+    display: table-cell;
+
+    vertical-align: top;
+    text-align: center;
+}

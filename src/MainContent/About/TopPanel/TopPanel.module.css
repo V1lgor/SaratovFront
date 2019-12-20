@@ -1,0 +1,21 @@
+.TopPanel {
+    background-color: #a7ead5;
+    padding: 11px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin-bottom: 20px;
+    justify-items: center;
+}
+
+.TopPanel h1 {
+    margin-right: 350px;
+    display: inline-block;
+    color: #5f6368;
+    text-align: center;
+    padding: 7px 15px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+

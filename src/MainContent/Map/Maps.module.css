@@ -1,0 +1,10 @@
+.Maps {
+    justify-self: center;
+
+    z-index: 10;
+    display: block;
+    width: 70%;
+    margin: auto;
+
+    height: 750px;
+}

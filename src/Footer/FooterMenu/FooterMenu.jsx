@@ -10,7 +10,7 @@ class FooterMenu extends React.Component {
                 <MenuItem href = "/faq" text = "FAQ"/>
                 <MenuItem text = "Обратная связь"/>
                 <MenuItem text = "Контакты"/>
-                <MenuItem text = "О нас"/>
+                <MenuItem href = "/about" text = "О нас"/>
             </ul>
         );
     }

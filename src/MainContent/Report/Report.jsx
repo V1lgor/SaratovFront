@@ -5,6 +5,8 @@ import ReportType from "./ReportType/ReportType";
 import DangerLevel from "./DangerLevel/DangerLevel";
 import ChooseAnonymous from "./ChooseAnonymous/ChooseAnonymous";
 
+import styles from './Report.module.css';
+
 class Report extends React.Component {
 
     constructor(props) {

@@ -28,14 +28,14 @@ class ReportTheme extends React.Component {
     render() {
         return (
             <form className={styles.ReportTheme}>
-                <h1 className={styles.FormTitle}>Опишите возникшую проблему</h1>
-                <label htmlFor="theme">Тема:</label>
-                <input ref = {this.themeInput} type="text" id = "theme" placeholder = "Тема"/>
+                <h2 className={styles.FormTitle}>Опишите возникшую проблему</h2>
+                <label htmlFor="theme">Тема проблемы:</label>
+                <input ref = {this.themeInput} type="text" id = "theme" placeholder = "Введите тему"/>
 
-                <label htmlFor="description">Описание:</label>
-                <textarea ref = {this.descriptionInput} id = "description" placeholder = "Описание"/>
+                <label htmlFor="description">Введите описание:</label>
+                <textarea ref = {this.descriptionInput} id = "description" placeholder = "Введите детальное описание"/>
 
-                <NavLink to = "report-type" onClick = {this.handleSubmit} className={styles.Forward}>Далее</NavLink>
+                <NavLink to = "report-type" onClick = {this.handleSubmit} className={styles.Btn}>Далее</NavLink>
             </form>
         );
     }

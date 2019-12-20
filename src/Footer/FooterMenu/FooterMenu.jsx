@@ -8,8 +8,8 @@ class FooterMenu extends React.Component {
         return (
             <ul className={styles.FooterMenu}>
                 <MenuItem href = "/faq" text = "FAQ"/>
-                <MenuItem text = "Обратная связь"/>
-                <MenuItem text = "Контакты"/>
+                <MenuItem href = "/ask-question" text = "Обратная связь"/>
+                <MenuItem href = "/contacts" text = "Контакты"/>
                 <MenuItem href = "/about" text = "О нас"/>
             </ul>
         );

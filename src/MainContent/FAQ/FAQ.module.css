@@ -20,14 +20,13 @@
     grid-column-end: 4;
     font-size: x-large;
     padding: 10px 0;
-    background-color: rgba(76, 185, 42, 0.71);
+    background-color: #44aa9c;
     border-bottom: 1px solid rgba(0, 0, 0, 0.74);
 }
 
 .FAQ_top h2 {
     grid-column-start: 2;
-    color: rgba(0, 0, 0, 0.74);
-
+    color: white;
 }
 
 .heading {

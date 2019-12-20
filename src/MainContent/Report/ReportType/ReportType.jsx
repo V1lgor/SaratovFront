@@ -31,7 +31,7 @@ class ReportType extends React.Component {
             .then(data => {
                 //let problemCategoryList = data;
                 let problemCategoryList = [{category: "Dick"}, {category: "Pizda"}];
-                let selectedCategory = problemCategoryList[0];
+                let selectedCategory = problemCategoryList[0].category;
                 this.setState({problemCategoryList, selectedCategory});
             });
     }
@@ -45,7 +45,8 @@ class ReportType extends React.Component {
     }
 
     handleSelectChange() {
-        let selectedCategory = this.categorySelect.current.options[this.categorySelect.current.selectedIndex];
+        let selectedCategory = this.categorySelect.current.options[this.categorySelect.current.selectedIndex].value;
+        console.log(selectedCategory);
         this.setState({selectedCategory});
     }
 
@@ -78,15 +79,15 @@ class ReportType extends React.Component {
                 <p className={styles.Description}>Мы автоматически определили тип Вашей проблемы. Если Вы считаете, что выбор сделан неправильно, нажмите кнопку "Изменить".</p>
 
                 <label htmlFor="type">Тип проблемы:</label>
-                <input readOnly ref = {this.typeInput} value={this.state.selectedCategory.category} type = "text" id = "type" className={styles.TypeInput}/>
+                <input readOnly ref = {this.typeInput} value={this.state.selectedCategory} type = "text" id = "type" className={styles.TypeInput}/>
 
                 <label htmlFor={"changeCheckbox"}>Изменить</label>
                 <input type="checkbox"  ref = { this.categoryChangeCheckboxRef} className={styles.ChangeCheckbox} onChange={this.handleCheckboxChange}/>
 
                 {this.state.isSelectVisible ? this.problemCategoryListToSelect() : null}
 
-                <NavLink to = "theme"        onClick = {this.handleSubmitBackward}>Назад</NavLink>
-                <NavLink to = "danger-level" onClick = {this.handleSubmitForward}> Далее</NavLink>
+                <NavLink to = "theme"        onClick = {this.handleSubmitBackward} className={styles.Btn + ' ' + styles.Backward}>Назад</NavLink>
+                <NavLink to = "danger-level" onClick = {this.handleSubmitForward} className={styles.Btn + ' ' + styles.Forward}>Далее</NavLink>
             </form>
         );
     }

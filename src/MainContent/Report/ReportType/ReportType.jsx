@@ -11,32 +11,42 @@ class ReportType extends React.Component {
         // Выделяем отдельно объект под список типов проблем
         this.state = {
             isSelectVisible: false,
-            problemCategoryList: [{category: ""}]
+            problemCategoryList: [{category: ""}],
+            selectedCategory: ""
         };
 
         this.typeInput = React.createRef();
         this.categoryChangeCheckboxRef = React.createRef();
+        this.categorySelect = React.createRef();
 
         this.handleSubmitForward  = this.handleSubmitForward.bind(this);
         this.handleSubmitBackward = this.handleSubmitBackward.bind(this);
         this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
+        this.handleSelectChange = this.handleSelectChange.bind(this);
     }
 
     componentDidMount() {
         fetch('https://test.project-saratov.ml/api/v1/complaint/getallcomplaintcategories')
             .then(result => result.json())
             .then(data => {
-                let problemCategoryList = data;
-                this.setState({problemCategoryList});
+                //let problemCategoryList = data;
+                let problemCategoryList = [{category: "Dick"}, {category: "Pizda"}];
+                let selectedCategory = problemCategoryList[0];
+                this.setState({problemCategoryList, selectedCategory});
             });
     }
 
     problemCategoryListToSelect() {
         return (
-            <select className={styles.CategoryList}>
+            <select className={styles.CategoryList} onChange = {this.handleSelectChange} ref = {this.categorySelect}>
                 {this.state.problemCategoryList.map(problemCategoryList => <option>{problemCategoryList.category}</option>)}
             </select>
         );
+    }
+
+    handleSelectChange() {
+        let selectedCategory = this.categorySelect.current.options[this.categorySelect.current.selectedIndex];
+        this.setState({selectedCategory});
     }
 
     handleSubmitForward(problemType) {
@@ -63,11 +73,12 @@ class ReportType extends React.Component {
     render() {
 
         return (
-            <form className={styles.formDesign}>
-                <p>Мы автоматически определили тип вашей проблемы, если вы не согласны, нажмите "изменить"</p>
+            <form className={styles.ReportType}>
+                <h2>Тип проблемы</h2>
+                <p className={styles.Description}>Мы автоматически определили тип Вашей проблемы. Если Вы считаете, что выбор сделан неправильно, нажмите кнопку "Изменить".</p>
 
                 <label htmlFor="type">Тип проблемы:</label>
-                <input readOnly ref = {this.typeInput} value={this.state.problemCategoryList[0].category} type = "text" id = "type"/>
+                <input readOnly ref = {this.typeInput} value={this.state.selectedCategory.category} type = "text" id = "type" className={styles.TypeInput}/>
 
                 <label htmlFor={"changeCheckbox"}>Изменить</label>
                 <input type="checkbox"  ref = { this.categoryChangeCheckboxRef} className={styles.ChangeCheckbox} onChange={this.handleCheckboxChange}/>

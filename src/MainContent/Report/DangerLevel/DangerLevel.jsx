@@ -60,9 +60,11 @@ class DangerLevel extends React.Component {
                            value={this.state.dangerLevel} onChange={this.handleDangerLevelRangeChange}/>
                 </div>
 
-                <p>{this.state.dangerLevel} - {this.dangerLevelToDescription(this.state.dangerLevel)}</p>
-                <Link to = "report-type"   onClick={this.handleSubmit}>Назад</Link>
-                <Link to = "choose-anon"   onClick={this.handleSubmit}>Далее</Link>
+                <p className={styles.DangerDescription}>{this.state.dangerLevel} - {this.dangerLevelToDescription(this.state.dangerLevel)}</p>
+                <Link to="report-type" onClick={this.handleSubmit}
+                      className={styles.Btn + ' ' + styles.Backward}>Назад</Link>
+                <Link to="choose-anon" onClick={this.handleSubmit}
+                      className={styles.Btn + ' ' + styles.Forward}>Далее</Link>
 
             </form>
         )

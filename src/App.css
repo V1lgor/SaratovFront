@@ -1,13 +1,13 @@
 html, body {
   background-color: #f1f3f4;
-  height: 100%;
+  height: 100vh;
 }
 
 .App {
   display: grid;
   grid-template-rows: auto 1fr auto; /*fraction*/
 
-
+  min-height: 100vh;
 
   grid-template-columns: 100%;
 

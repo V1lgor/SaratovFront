@@ -39,6 +39,14 @@
     align-self: center;
 }
 
+.ReportType .CategoryList
+{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin-bottom: 20px;
+    width: 40%;
+}
+
 .ReportType .Btn
 {
     background-color: #44aa9c;
@@ -49,13 +57,12 @@
     width: 70px;
 }
 
-.ReportType .CategoryList
+.Btn:hover
 {
-    grid-column-start: 1;
-    grid-column-end: -1;
-    margin-bottom: 20px;
-    width: 40%;
+    background-color: #7AB19C;
 }
+
+
 
 .ReportType .Btn.Forward
 {

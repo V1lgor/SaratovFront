@@ -1,22 +1,36 @@
 .DangerLevel {
     display: grid;
     justify-items: center;
+    box-shadow: 0 0 5px 0 #ccc;
+    border: 1px solid #ddd;
+    width: 33%;
+    margin: 20px auto 20px auto;
+    border-radius: 20px;
+    padding: 0 40px 20px 40px;
+    color: #525252;
+    grid-template-columns: auto auto;
 }
 
 .DangerLevel h2 {
     margin-top: 10px;
     margin-bottom: 10px;
+    grid-column-start: 1;
+    grid-column-end: -1;
 }
 
 .DangerInput {
     width: 500px;
     height: 21px;
     margin-bottom: 20px;
+    grid-column-start: 1;
+    grid-column-end: -1;
 }
 
 .DangerInput input[type=range] {
     width: 100%;
     -webkit-appearance: none;
+    grid-column-start: 1;
+    grid-column-end: -1;
 
 }
 
@@ -54,4 +68,33 @@ input[type=range]::-webkit-slider-runnable-track {
 
 .DangerInput input[type=range]::-webkit-slider-container {
     background-color: #f1f3f4;
+}
+
+.DangerDescription
+{
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.DangerLevel .Btn
+{
+    background-color: #44aa9c;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    width: 70px;
+}
+
+.Btn:hover
+{
+    background-color: #7AB19C;
+}
+.DangerLevel .Btn.Backward
+{
+    justify-self: left;
+}
+.DangerLevel .Btn.Forward
+{
+    justify-self: right;
 }

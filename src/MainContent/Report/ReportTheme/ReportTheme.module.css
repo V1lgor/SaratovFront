@@ -1,0 +1,53 @@
+.ReportTheme
+{
+    border: 1px solid #ddd;
+    margin: 20px auto 20px auto;
+    padding: 0 40px 10px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 0 #ccc;
+    color: #323232;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: left;
+    width: 33%;
+}
+.FormTitle
+{
+    margin: 0;
+    font-weight: normal;
+    font-size: 24px;
+    justify-self: center;
+}
+
+.Forward
+{
+    justify-self: center;
+    background-color: #44aa9c;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.Forward:hover
+{
+    background-color: #7AB19C;
+}
+
+.ReportTheme label
+{
+    margin-bottom: 10px;
+}
+
+.ReportTheme input
+{
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.ReportTheme textarea
+{
+    margin-bottom: 10px;
+    resize: none;
+    width: 50%;
+    height: 150px;
+}

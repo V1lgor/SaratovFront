@@ -28,9 +28,6 @@ class Report extends React.Component {
         console.log(this.state);
         return (
             <Switch>
-                <Route path = "/send-report/theme">
-                    <ReportTheme updateReportDraft = {this.updateReportDraft}/>
-                </Route>
                 <Route path = "/send-report/report-type">
                     <ReportType updateReportDraft = {this.updateReportDraft}/>
                 </Route>
@@ -42,6 +39,9 @@ class Report extends React.Component {
                 </Route>
                 <Route path = "/send-report/contacts">
                     <ChooseAnonymous updateReportDraft = {this.updateReportDraft}/>
+                </Route>
+                <Route path = "/send-report/">
+                    <ReportTheme updateReportDraft = {this.updateReportDraft}/>
                 </Route>
                 <Route path = "/send-report/">
                     <ReportTheme updateReportDraft = {this.updateReportDraft}/>

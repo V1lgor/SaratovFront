@@ -4,7 +4,7 @@ import ReportTheme from "./ReportTheme/ReportTheme";
 import ReportType from "./ReportType/ReportType";
 import DangerLevel from "./DangerLevel/DangerLevel";
 import ChooseAnonymous from "./ChooseAnonymous/ChooseAnonymous";
-
+import ReportContacts from "./ReportContacts/ReportContacts";
 import styles from './Report.module.css';
 
 class Report extends React.Component {
@@ -15,6 +15,7 @@ class Report extends React.Component {
         this.state = {};
 
         this.updateReportDraft = this.updateReportDraft.bind(this);
+        console.log(this.state);
     }
 
     updateReportDraft(draftPart, draftPartTitle) {
@@ -39,11 +40,8 @@ class Report extends React.Component {
                 <Route path = "/send-report/choose-anon">
                     <ChooseAnonymous updateReportDraft = {this.updateReportDraft}/>
                 </Route>
-                <Route path = "/send-report/contacts">
-                    <ChooseAnonymous updateReportDraft = {this.updateReportDraft}/>
-                </Route>
-                <Route path = "/send-report/">
-                    <ReportTheme updateReportDraft = {this.updateReportDraft}/>
+                <Route path = "/send-report/reportContacts">
+                    <ReportContacts updateReportDraft = {this.updateReportDraft}/>
                 </Route>
                 <Route path = "/send-report/">
                     <ReportTheme updateReportDraft = {this.updateReportDraft}/>

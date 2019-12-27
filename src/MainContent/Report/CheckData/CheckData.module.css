@@ -1,0 +1,39 @@
+.CheckForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 0 5px 0 #ccc;
+    border: 1px solid #ddd;
+    margin: 20px auto 20px auto;
+    width: 33%;
+    padding: 0 40px 20px 40px;
+    grid-row-gap: 10px;
+    color: #525252;
+    border-radius: 20px;
+}
+
+.CheckForm .FormTitle
+{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin: 10px 0;
+}
+
+.CheckForm textArea {
+    resize:none;
+    height: 100px;
+}
+
+.CheckForm .Btn
+{
+    background-color: #44aa9c;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    width: 70px;
+}
+
+.CheckForm .Btn.Forward
+{
+    justify-self: right;
+}

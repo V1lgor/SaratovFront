@@ -3,6 +3,7 @@ import MainTopNav from "./MainTopNav/MainTopNav";
 import styles from "../Map/Maps.module.css";
 import {Route} from "react-router-dom";
 import {YMaps, Map, Placemark} from "react-yandex-maps";
+import MapCategoryList from "./MapCategoryList/MapCategoryList";
 
 class Maps extends React.Component {
     constructor(props) {
@@ -47,55 +48,54 @@ class Maps extends React.Component {
         this.setState({events, problems})
     }
 
-    pointAndBalloon(element, color){
+    pointAndBalloon(element, color) {
         return element.map(point => <Placemark
-                    key={point.id}
-                    geometry={[point.x_pos, point.y_pos]}
-                    properties={{
-                        hintContent: point.title,
-                        balloonContentHeader: point.title,
-                        balloonContent: point.description,
-                        balloonContentFooter: point.date + " " + point.time
-                    }}
-                    modules={[
-                        "geoObject.addon.hint",
-                        'geoObject.addon.balloon',
-                        "layout.ImageWithContent"
-                    ]}
+                key={point.id}
+                geometry={[point.x_pos, point.y_pos]}
+                properties={{
+                    hintContent: point.title,
+                    balloonContentHeader: point.title,
+                    balloonContent: point.description,
+                    balloonContentFooter: point.date + " " + point.time
+                }}
+                modules={[
+                    "geoObject.addon.hint",
+                    'geoObject.addon.balloon',
+                    "layout.ImageWithContent"
+                ]}
 
-                    options={{
-                        /*iconLayout:'default#image',*/
-                        preset: color,
-                        /*iconImageHref: 'boat.jpg',*/
-                        iconContentLayout: point.title,
-                        iconContentSize: [100,100],
-                        iconContentOffset: [10, 10],
-                    }}
+                options={{
+                    /*iconLayout:'default#image',*/
+                    preset: color,
+                    /*iconImageHref: 'boat.jpg',*/
+                    iconContentLayout: point.title,
+                    iconContentSize: [100, 100],
+                    iconContentOffset: [10, 10],
+                }}
 
-                />
-
-
+            />
         )
     }
 
     render() {
         return (
-            <section id={"map"}>
+            <section className={styles.MapPage}>
                 <MainTopNav/>
-
-                <YMaps >
-                    <div>
-                        <Map defaultState={{center:[51.533103, 46.034158],
-                                            zoom: 12}}
-                             className={styles.Maps}>
-
-
-
-                            {this.pointAndBalloon(this.state.events, 'islands#blueDotIcon')}
-                            {this.pointAndBalloon(this.state.problems, 'islands#redDotIcon')}
-                        </Map>
-                    </div>
-                </YMaps>
+                <div className={styles.MapContent}>
+                    <YMaps>
+                        <div>
+                            <Map defaultState={{
+                                center: [51.533103, 46.034158],
+                                zoom: 12
+                            }}
+                                 className={styles.Maps}>
+                                {this.pointAndBalloon(this.state.events, 'islands#blueDotIcon')}
+                                {this.pointAndBalloon(this.state.problems, 'islands#redDotIcon')}
+                            </Map>
+                        </div>
+                    </YMaps>
+                    <MapCategoryList/>
+                </div>
             </section>
         );
     }

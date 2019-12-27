@@ -16,13 +16,13 @@ class ReportTheme extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleSubmit(event) {
+    handleSubmit() {
 
-        let reportTheme = {
-            theme: this.themeInput.current.value,
-            description: this.descriptionInput.current.value
-        };
-        this.props.updateReportDraft(reportTheme, "reportTheme"); // this.setState(reportDraft)
+        let theme =  this.themeInput.current.value;
+        let description = this.descriptionInput.current.value;
+
+        this.props.updateReportDraft(theme, "title");
+        this.props.updateReportDraft(description, "description");
     }
 
     render() {

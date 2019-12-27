@@ -27,6 +27,7 @@
 }
 
 .DangerInput input[type=range] {
+    padding: 0;
     width: 100%;
     -webkit-appearance: none;
     grid-column-start: 1;

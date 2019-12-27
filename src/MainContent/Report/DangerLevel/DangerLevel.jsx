@@ -43,9 +43,7 @@ class DangerLevel extends React.Component {
 
 
     handleSubmit() {
-        let dangerLevel = {
-            level: this.state.dangerLevel
-        };
+        let dangerLevel = this.state.dangerLevel;
 
         this.props.updateReportDraft(dangerLevel, "dangerLevel");
     }

@@ -18,15 +18,13 @@ class ReportContacts extends React.Component {
 
     handleSubmit() {
 
-        let Person = {
+        let person = {
             id: "66",
             name:  this.Name.current.value,
             phone: this.Phone.current.value,
             email: this.Email.current.value
         }
-        this.props.updateReportDraft(Person, "Person");
-        console.log('person:');
-        console.log(Person);
+        this.props.updateReportDraft(person, "person");
     }
 
     render() {
@@ -49,7 +47,7 @@ class ReportContacts extends React.Component {
                 <div className={styles.buttons}>
                     <Link to = "choose-anon" onClick = {this.handleSubmit}
                           className = {styles.Btn + ' ' + styles.Backward}>Назад</Link>
-                    <Link to = "visibility" onClick = {this.handleSubmit}
+                    <Link to = "check-data" onClick = {this.handleSubmit}
                           className = {styles.Btn + ' ' + styles.Forward}>Далее</Link>
                  </div>
             </div>

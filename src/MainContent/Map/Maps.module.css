@@ -1,10 +1,18 @@
-.Maps {
-    justify-self: center;
+.MapPage {
+}
 
+.Maps {
     z-index: 10;
     display: block;
-    width: 70%;
     margin: auto;
-
     height: 750px;
+}
+
+.MapContent {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 70% auto;
+    justify-self: center;
+    padding: 20px 0;
+    margin: 0 auto;
 }

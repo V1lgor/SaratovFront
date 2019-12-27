@@ -27,7 +27,7 @@ class ChooseAnonymous extends React.Component {
         this.setState({anonymous});
 
         this.props.updateReportDraft(anonymous, "anonymous");
-        this.props.updateReportDraft(visible, "visible");
+        this.props.updateReportDraft(visible  , "visible");
     }
 
     render() {

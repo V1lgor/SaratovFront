@@ -1,0 +1,32 @@
+.Item {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.Item .CategoryIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+
+.Item .CategoryTitle {
+    display: inline-block;
+    color: #705257;
+    border-bottom: 1px solid #705257;
+}
+
+.Item .CategoryTitle:hover {
+    color: #917277;
+    cursor: pointer;
+    border-color: #917277;
+}
+
+.Item .CategoryTitle:active {
+    color: #705257;
+    cursor: pointer;
+}
+
+.Item .ProblemCount {
+    display: inline-block;
+}

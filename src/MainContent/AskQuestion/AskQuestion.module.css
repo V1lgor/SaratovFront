@@ -1,52 +1,53 @@
-.formBody {
-    margin: 20px auto 20px auto;
+.FormBody {
+    margin: 20px auto;
     padding: 0 40px 10px 40px;
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: auto auto;
     border-radius: 15px;
     box-shadow: 0 0 5px 0 #ccc;
-    font-family: Cambria;
     border: 1px solid #ddd;
-    background-color: rgba(15, 232, 25, 0.11);
+    color: #333;
 }
 
-.inputField {
-    grid-column-start: 2;
+.InputField {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: auto 1fr;
     margin-top: 20px;
     font-size: large;
 }
 
-.inputField input {
-    float: right;
+.InputField label {
+    grid-column: 1;
+    margin-right: 15px;
+    justify-self: left;
+}
+
+.InputField input {
+    justify-self: right;
+    grid-column: 2;
     width: 450px;
-    border-radius: 9px;
     padding: 5px 10px;
 }
 
-
-
-.inputField textarea {
+.InputField textarea {
+    grid-column: 2;
     resize: none;
     width: 450px;
     height: 150px;
-    border-radius: 9px;
     padding: 5px 10px;
     display: block;
-    margin: 10px auto;
 }
 
-.inputField label {
-    margin-right: 15px;
-    float : left;
-}
-.formBody .pageDescription {
+.FormBody .PageDescription {
     display: inline-block;
     grid-column-start: 2;
     font-size: large;
+    text-align: justify;
 
 }
 
-.formBody .feedbackTitle {
+.FormBody h2{
     grid-column-start: 2;
     font-size: xx-large;
     display:inline-block;
@@ -56,23 +57,30 @@
     grid-column-end: 4;
 }
 
-.formBody .lblDescription {
-    grid-column-start: 2;
-    float: none;
-    grid-column-end: 4;
-}
-.sendQuestion {
+
+.SendQuestion {
     margin-top: 20px;
-    grid-column-start: 2;
+    grid-column-start: 1;
+    grid-column-end: -1;
     justify-self: center;
     display: inline-block;
     width: 250px;
     text-decoration: none;
     font-weight: bold;
-    outline: 2px solid #5f6368;
+    outline: 1px solid #ccc;
     padding: 10px 20px;
     box-sizing: content-box;
     transition: 0.1s;
     color: #5f6368;
 }
 
+
+.SendQuestion:hover {
+    background-color: #44AA9C;
+    color: #fff;
+}
+
+.ErrorMessage {
+    font-style: italic;
+    color: #f00;
+}

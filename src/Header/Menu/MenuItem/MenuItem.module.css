@@ -16,7 +16,7 @@
     color: #878d93;
 }
 
-.MenuItem a:hover{
+.MenuItem:hover > a{
     color: #fff;
     background-color: #cbeadd;
 }
@@ -36,6 +36,9 @@
 .SubMenu {
     display: none;
     z-index: 100;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-bottom: none;
 }
 
 .SubMenu .MenuItem:first-child {

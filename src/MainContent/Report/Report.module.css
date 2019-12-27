@@ -1,4 +1,8 @@
 form {
     align-self: center;
-    vertical-align: middle;
+
+}
+
+input, textarea {
+    padding: 5px;
 }

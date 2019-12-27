@@ -22,15 +22,15 @@ class ReportType extends React.Component {
         this.handleSubmitForward  = this.handleSubmitForward.bind(this);
         this.handleSubmitBackward = this.handleSubmitBackward.bind(this);
         this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
-        this.handleSelectChange = this.handleSelectChange.bind(this);
+        this.handleSelectChange   = this.handleSelectChange.bind(this);
     }
 
     componentDidMount() {
         fetch('https://test.project-saratov.ml/api/v1/complaint/getallcomplaintcategories')
             .then(result => result.json())
             .then(data => {
-                //let problemCategoryList = data;
-                let problemCategoryList = [{category: "Dick"}, {category: "Pizda"}];
+                let problemCategoryList = data;
+                //let problemCategoryList = [{category: "Dick"}, {category: "Pizda"}];
                 let selectedCategory = problemCategoryList[0].category;
                 this.setState({problemCategoryList, selectedCategory});
             });
@@ -51,19 +51,21 @@ class ReportType extends React.Component {
     }
 
     handleSubmitForward(problemType) {
-
-        let reportType = {
-            type: this.typeInput.current.value
+        let category = {
+            id: 0,
+            category: this.typeInput.current.value
         };
 
-        this.props.updateReportDraft(reportType, "reportType"); // this.setState(reportDraft)
+        this.props.updateReportDraft(category, "category");
     }
 
     handleSubmitBackward(problemType) {
-        let reportType = {
-            type: this.typeInput.current.value
+        let category = {
+            id: 0,
+            category: this.typeInput.current.value
         };
-        this.props.updateReportDraft(reportType, "reportType"); // this.setState(reportDraft)
+
+        this.props.updateReportDraft(category, "category");
     }
 
     handleCheckboxChange() {

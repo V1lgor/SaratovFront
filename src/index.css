@@ -2,11 +2,35 @@
   margin: 0;
   padding: 0;
 }
-
+@font-face {
+  font-family: 'PT Sans';
+  src: local('PT Sans'), local('PTSans-Regular'), url('fonts/PT Sans/ptsans.woff2') format('woff2'), url('fonts/PT Sans/ptsans.woff') format('woff'), url('fonts/PT Sans/ptsans.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PT Sans';
+  src: local('PT Sans Italic'), local('PTSans-Italic'), url('fonts/PT Sans/ptsansitalic.woff2') format('woff2'), url('fonts/PT Sans/ptsansitalic.woff') format('woff'), url('fonts/PT Sans/ptsansitalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'PT Sans';
+  src: local('PT Sans Bold'), local('PTSans-Bold'), url('fonts/PT Sans/ptsansbold.woff2') format('woff2'), url('fonts/PT Sans/ptsansbold.woff') format('woff'), url('fonts/PT Sans/ptsansbold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PT Sans';
+  src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'), url('fonts/PT Sans/ptsansbolditalic.woff2') format('woff2'), url('fonts/PT Sans/ptsansbolditalic.woff') format('woff'), url('fonts/PT Sans/ptsansbolditalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif;*/
+  font-family: "PT Sans";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

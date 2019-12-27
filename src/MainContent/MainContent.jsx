@@ -6,7 +6,7 @@ import Events from "./Events/Events";
 import Maps from "./Map/Maps";
 import Report from "./Report/Report";
 import FAQ from "./FAQ/FAQ";
-import Ask_question from "./Ask_question/Ask_question";
+import AskQuestion from "./AskQuestion/AskQuestion";
 import About from "./About/About";
 import Contacts from "./Contacts/Contacts";
 
@@ -25,7 +25,7 @@ class MainContent extends React.Component {
                         <Events/>
                     </Route>
                     <Route path= "/ask-question">
-                        <Ask_question/>
+                        <AskQuestion/>
                     </Route>
                     <Route path= "/contacts">
                         <Contacts/>

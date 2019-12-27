@@ -8,12 +8,10 @@ class Contacts extends React.Component {
             <div className={styles.ContactsBody}>
                 <h2 className={styles.ContactsTitle}>Контакты</h2>
                 <div className={styles.ContactsContent}>
-                    <p>Телефон</p>
-                    <p>+7(8452)21-06-25</p>
-                    <p>E-mail:</p>
-                    <p>Saratov@gmail.com</p>
+                    <p><b>Телефон: </b> +7(8452)21-06-25</p>
+                    <p><b>E-mail: </b>Saratov@gmail.com</p>
+                    <p><b>Адрес: </b>г. Саратов, ул. Вольская, д. 10а, ком. 418</p>
                 </div>
-                <p className={styles.ContactsLast}> Заняты? Оставте Ваши данные, и мы свяжемся с Вами в удобное для вас время.</p>
             </div>
         );
     }

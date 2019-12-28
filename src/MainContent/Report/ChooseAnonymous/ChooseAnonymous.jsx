@@ -47,7 +47,7 @@ class ChooseAnonymous extends React.Component {
                 <input id="anonymous" type="checkbox" ref={this.anonymousCheckbox}/>
                 <div className={styles.Description}>
                     <h3>Отображаемость на карте</h3>
-                    <label htmlFor="showOnMap">Я согласен, что мое сообщение не будет отображаться на карте у всех
+                    <label htmlFor="showOnMap">Я согласен, что мое сообщение будет отображаться на карте у всех
                         пользователей</label>
                 </div>
                 <input id="showOnMap" type="checkbox" checked="false" ref={this.showOnMapCheckbox}/>

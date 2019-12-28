@@ -99,7 +99,7 @@ class Report extends React.Component {
     }
 
     getVisibility() {
-        return this.state.visibility
+        return this.state.visible
     }
 
     getAnonymous() {
